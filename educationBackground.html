@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User's Education background</title>
+    <link rel="stylesheet" href="/my bootsrap/css/bootstrap.css">
+    <link rel="stylesheet" href="ed.css">
+    <style>
+        .container{overflow: hidden;}
+        .tab{float: left;}
+        .tab-2{margin-left: 50px}  
+        .tab-2 input{display: block; margin-bottom: 10px;}
+        tr{transition: all .25s ease-in-out;}
+        tr:hover{background-color: #eee; cursor: pointer;}
+    </style>
+</head>
+<body>
+    <div class="head">
+        <h1> MakVybez</h1>
+        <small>Education background</small>
+    </div>
+    <div class="container">
+        <div class="fun1">
+            <div class="tab tab-1">
+                <table id="table" border="1" class="table-sm">
+                    <tr>
+                        <th>Institution</th>
+                        <th>Award</th>
+                        <th>Year</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="fun">
+            <div class="tab tab-2">
+                Institution: <input type="text" name="school" id="school">
+                Award: <input type="text" name="award" id="award">
+                Year: <input type="text" name="yrs" id="yrs">
+    
+                <button onclick="addHtmlTableRow();" class="btn btn-success">Add</button>
+                <button onclick="editHtmlTableSelectedRow();" class="btn btn-info">Edit</button>
+                <button onclick="removeSelectedRow();" class="btn btn-danger">Remove</button>
+    
+            </div>
+        </div>
+        </div>
+
+    <script>
+
+        var rIndex,
+            table = document.getElementById("table");
+
+            
+        // add row
+        function addHtmlTableRow(){
+           
+            
+            var newRow = table.insertRow(table.length),
+                cell1 = newRow.insertCell(0),
+                cell2 = newRow.insertCell(1),
+                cell3 = newRow.insertCell(2),
+                Institution = document.getElementById("school").value,
+                Award = document.getElementById("award").value,
+                Year = document.getElementById("yrs").value;
+            
+            cell1.innerHTML = Institution;
+            cell2.innerHTML = Award;
+            cell3.innerHTML = Year;
+
+            selectedRowToInput();
+        }
+
+        function selectedRowToInput()
+        {
+            
+            for (let index = 0; index < table.rows.length; index++) {
+                 table.rows[index].onclick = function(){
+                    rIndex = this.rowIndex;
+                    document.getElementById("school").value = this.cells[0].innerHTML;
+                    document.getElementById("award").value = this.cells[1].innerHTML;
+                    document.getElementById("yrs").value = this.cells[2].innerHTML;
+                 };
+                
+            }
+        }
+        selectedRowToInput(); 
+
+        function editHtmlTableSelectedRow()
+        {    
+            var sch =  document.getElementById("school").value,
+                awd =  document.getElementById("award").value,
+                year  =  document.getElementById("yrs").value; 
+
+            table.rows[rIndex].cells[0].innerHTML = sch ; 
+            table.rows[rIndex].cells[1].innerHTML = awd ; 
+            table.rows[rIndex].cells[2].innerHTML = year; 
+        }
+        function removeSelectedRow()
+        {
+            table.deleteRow(rIndex);
+            // clear input tetx
+            document.getElementById("school").value = "";
+            document.getElementById("award").value = "";
+            document.getElementById("yrs").value = ""; 
+        } 
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+#profile,.profile {
+    width:auto;
+    height:150px;
+    border-radius: 50%;
+}
+
+#usersList {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    cursor:pointer;
+}
+
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    gap: 50px;
+}
+
+body {
+    background-color: antiquewhite;
+}

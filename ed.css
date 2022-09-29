@@ -1,0 +1,28 @@
+body{
+    margin:0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    background: #f2f2f2;
+
+}
+
+.container{
+    width: 700px;
+    max-width: 900;
+    margin:1rem;
+    padding:1rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    
+}
+.head{
+    position: absolute;
+    top: 100px;
+    
+}

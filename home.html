@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Inbox</title>
+    
+    <link rel="stylesheet" href="css/mystylez.css">
+    <link rel="stylesheet" id="themStylesheetLink" href="css/themes/default.css">
+    <script src="https://kit.fontawesome.com/cafb1595b5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="/my bootsrap/css/bootstrap.css">
+    <link rel="stylesheet" href="adimg.css">
+</head>
+<body>
+        <div class="top-container">
+    <nav class="top-container" >
+        <div class="left">
+            <!--logo-->
+
+           <h1> <strong>MakVybez</strong></h1>
+          
+        </div>
+        <div class="right">
+            <div class="nav">
+                <img src="/images/icons8-home-64.png" alt=""><br>
+                <p>Home</p>
+                <!--<div class="volt"><p>my name</p></div>-->
+            </div>
+            <div class="nav" id="pic">
+                <img src="/images/icons8-male-user-30.png" alt="profile picture" id="photo"><br>
+                <input type="file" id="file">
+                <label for="file" id="uploadBtn" >Change photo </label>
+               <!-- <p>profile picture</p>-->
+                <!--<div class="volt"><p>my name</p></div>-->
+            </div>
+           
+           <div class="nav">
+                <img src="/images/33987532316292108533838-128.png" alt=""><br>
+                <p><a href="log.html">Logout</a></p>
+               <!-- <h3>Add photo</h3>-->
+            </div>
+        </div>
+       
+
+    </nav> <hr>
+
+</div>
+   
+
+            <div class="look">
+                <div class="search-area">
+                    <div class="search-box">
+                        <img src="/images/such.png" alt="">
+                        <input type="text" placeholder="Search" >
+                        
+                      </div>
+                      <div class="button">
+                        <button class="btn btn-primary">search</button>
+                      </div>
+                </div>
+                <div class="menu" onclick="sideMenuToggle()">
+                    <img src="/images/icons8-top-menu-48.png" alt="">
+                </div>
+                <div class="side-menu">
+                    <div class="inside">
+                        <div class="user1">
+                            <img src="/images/icons8-night-mode-67.png" alt="">
+                            <div>
+                                <p>Night mode</p>
+                                <a href="#"></a>
+                                <div id="dark-btn" ">
+                                    <span></span>
+                                </div>
+                            </div>
+                    </div>   <hr>
+                      <div class="user1">
+                        <img src="/images/icons8-map-pinpoint-96.png" alt="">
+                        <div>
+                            <p>Location</p>
+                            <a href="#">Find your friends</a>
+                        </div>
+                        </div><hr>
+                        <div class="user1">
+                        <img src="/images/icons8-themes-48.png" alt="">
+                        <div>
+                            <p>Themes</p>
+                            <a href="#">change your themes</a>
+                        </div>
+                        </div><hr>
+                         
+                    
+                    </div>
+                </div>
+            </div>
+            <hr>
+       <div class="content-below">
+         <div class="content-left">
+            <div class="links">
+            <a href="#"><img src="/images/icons8-friends-48.png" alt="">Friends</a>
+            <a href="profile.html"><img src="images/icons8-user-48.png" alt="">My profile</a>
+            <a href="educationBackground.html"><img src="images/icons8-graduate-64.png" alt="">Education status</a>
+            <a href="hobbies.html"><img src="images/icons8-jigsaws-64.png" alt="">My hobbies</a>
+            
+           
+        
+            </div>
+            
+        </div>
+        <div class="content-right">
+               <div class="post-container">
+                <div class="user1">
+                    <img src="/images/pipo2.jpg" alt="">
+                    <div>
+                        <p>Lumbuye</p>
+                        <small>public<i class="fa-sharp fa-solid fa-chevron-down"></i></small>
+                    </div>
+                </div>
+                <div class="post-input-container">
+                    <textarea rows="4" placeholder="Say it out?"></textarea>
+                    <div class="add-post-links">
+                        <a href="#"><img src="/images/vid1.png" alt="live video">Live Video</a>
+                        <a href="#"><img src="/images/photo.png" alt="live video">photo/video</a>
+                        <a href="#"><img src="/images/music.png" alt="live video">my jamz</a>
+                    </div>
+                </div>
+               </div>
+
+               <div class="repost-cont">
+                <div class="user1">
+                    <img src="/images/pipo2.jpg" alt="">
+                    <div>
+                        <p>Lumbuye</p>
+                        <span>September 27 2022, 18:17 pm</span> 
+                    </div>
+               </div>
+                <p class="post-text">Happy birthday Evas </p> 
+                <img src="/images/vb.jpg" alt="" class="post-image"> 
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div><img src="/images/like.png" alt="">180</div>
+                        <div><img src="/images/icons8-comments-24.png" alt="">50</div>
+                        <div><img src="/images/icons8-share-24.png" alt="">20</div>
+                    </div>
+                    <div class="post-profile-icon">
+                          <img src="images/pipo1.jpg" alt=""><i class="fa-sharp fa-solid fa-chevron-down"></i>
+                    </div>
+                </div> 
+               
+        </div>
+        <button type="button" class="load-more">More</button> 
+        <div class="footer">
+            <p>
+                copy-right @the A team 2022</p>
+           </div>
+       </div>
+
+       
+      <!-- <script>
+        function initThemeSelector(){ 
+            const themeSelect =document.getElementById("themeSelect");
+            const themesStylesheetLink =document.getElementById("themesStylesheetLink");
+
+            function activateTheme(themeName){
+                themesStylesheetLink.setAttribute("href",`css/themes/${themeName}.css`);
+
+            }
+            themeSelect.addEventListener("change", ()=> {
+                activateTheme(themeSelect.value);
+            }); 
+        }
+        initThemeSelector;
+       </script>-->
+    <script  src="script.js"></script>
+    <script  src="script2.js"></script>
+    <script  src="script3.js"></script>
+    <script>
+        userData = JSON.parse(sessionStorage.getItem("currentUserDetails"))
+        username = document.getElementById("user")
+        statement = document.getElementById("ps")
+        education = document.getElementById("edu")
+        hobbies = document.getElementById("hob")
+        image = document.getElementById("profile")
+        username.innerHTML = userData.name
+        statement.innerHTML = userData.personalStatement
+        education.innerHTML = userData.education
+        image.src = userData.img
+        userData.hobbies.forEach((x,i) => {
+            li = document.createElement("li")
+            node = document.createTextNode(x)
+            li.appendChild(node)
+            hobbies.appendChild(li)
+        })
+    </script>
+</body>
+</html>

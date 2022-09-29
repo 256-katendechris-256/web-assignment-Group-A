@@ -1,0 +1,18 @@
+.can{
+    place-items: center;
+    margin-left: 50px;
+    background: transparent;
+    
+    font-weight: bold;
+    font-size: 40px;
+    color: rgb(9, 105, 250);
+    align-items: center;
+    
+}
+h1 {
+    font-family: "Sofia";
+    color: rgb(9, 105, 250);
+}
+input{
+    border-radius: 20px;
+}

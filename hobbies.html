@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hobbies</title>
+    <link rel="stylesheet" href="/my bootsrap/css/bootstrap.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <script src="https://kit.fontawesome.com/cafb1595b5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="can">
+        <h1>Hobbies</h1>
+        <div class="hob">
+        
+            <label for="item">Enter your hobbies:</label>
+            <input type="text" name="item" id="item">
+            <button class="btn btn-primary">Add</button>
+        
+        <ul>
+
+        </ul>
+        </div>
+    </div>
+
+    <script>
+        let list = document.querySelector('ul');
+        let input = document.querySelector('input');
+        let button = document.querySelector('button');
+
+        button.onclick = () => {
+            let myItem = input.value;
+            input.value = '';
+
+            let listItem = document.createElement('li');
+            let listText = document.createElement('span');
+            let listBtn = document.createElement('button');
+
+            listItem.appendChild(listText);
+            listText.textContent = myItem;
+            listItem.appendChild(listBtn);
+            listBtn.textContent = 'Delete';
+
+            list.appendChild(listItem);
+
+            listBtn.onclick = (e) => {
+                list.removeChild(listItem);
+            }
+        input.focus();
+        }
+    </script>
+</body>
+</html>
